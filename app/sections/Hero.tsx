@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 import { shoes, statistics } from "../constants";
 import { Button, ShoeCard } from "../components";
 import { bigShoe1 } from "../assets/images";
 import { arrowRight } from "../assets/icons";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 /*typescript-disable */
 const Hero = () => {
@@ -64,7 +64,7 @@ const Hero = () => {
             <div key={index}>
               <ShoeCard 
                 imgURL={image}
-                changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}      
+                changeBigShoeImage={(shoe: SetStateAction<StaticImageData>) => setBigShoeImg(shoe)}      
                 bigShoeImg={bigShoeImg}
               />
             </div>

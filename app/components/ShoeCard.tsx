@@ -1,13 +1,7 @@
 import Image from "next/image";
 
-interface ShoeCardProps {
-  imgURL: {bigShoe: string, thumbnail: string};
-  changeBigShoeImage: (imgURL : string) => void;
-  bigShoeImg: string;
-}
-
 /*eslint-disable */
-const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg } : ShoeCardProps) => {
+const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg } : any) => {
   
   return (
     <div
